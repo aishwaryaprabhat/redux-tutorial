@@ -7,6 +7,11 @@
 
 
 ## Store
-
 - Store is basically a storage for all the states of the whole app
-- A globalized state storage
+- A globalized state storage place
+
+## Action
+
+
+## Reducer
+- Looks at state and decides how state of the app changes
