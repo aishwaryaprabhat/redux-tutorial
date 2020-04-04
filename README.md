@@ -9,6 +9,7 @@
 ## Store
 - Store is basically a storage for all the states of the whole app
 - A globalized state storage place
+- `let store = createStore(counter);` takes reducer(s) as argument
 
 ## Action
 - Describes what you want to do 
@@ -32,5 +33,19 @@ const decrement = () => {
 ## Reducer
 - Looks at action and decides how state of the app changes by talking to the store
 
+```
+const counter = (state=0, action) => {
+  switch(DeviceAcceleration.type){
+    case "INCREMENT":
+      return state+1
+    case "DECREMENT":
+      return state-1
+    default:
+      return state
+  }
+```
+
+
 ## Dispatch
 - Execute the action by sending action to the reducer
+- `store.dispatch(incrememnt());`
