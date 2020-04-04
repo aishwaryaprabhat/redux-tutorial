@@ -6,42 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
 
 
-
-//Store -> GLobalized State
-
-//Action -> Incremement
-const increment = () => {
-  return {
-    type: 'INCREMENT'
-  }
-}
-
-const decrement = () => {
-  return {
-    type: 'DECREMENT'
-  }
-}
-
-//Reducer
-const counter = (state=0, action) => {
-  switch(DeviceAcceleration.type){
-    case "INCREMENT":
-      return state+1
-    case "DECREMENT":
-      return state-1
-    default:
-      return state
-  }
-
-}
-
-let store = createStore(counter);
-
-//Dispatch
-store.subscribe(()=>console.log(store.getState()));
-
-store.dispatch(incrememnt());
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
