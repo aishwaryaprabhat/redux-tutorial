@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux';
+
 
 
 //Store -> GLobalized State
 
 //Action -> Incremement
-
+const increment = () => {
+  return {
+    type: 'INCREMENT',
+  }
+}
 //Reducer
+
+//Dispatch
 
 ReactDOM.render(
   <React.StrictMode>

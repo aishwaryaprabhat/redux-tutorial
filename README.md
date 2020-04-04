@@ -11,7 +11,26 @@
 - A globalized state storage place
 
 ## Action
+- Describes what you want to do 
+- A function that returns an object
 
+```
+//Action -> Incremement
+const increment = () => {
+  return {
+    type: 'INCREMENT'
+  }
+}
+
+const decrement = () => {
+  return {
+    type: 'DECREMENT'
+  }
+}
+```
 
 ## Reducer
-- Looks at state and decides how state of the app changes
+- Looks at action and decides how state of the app changes by talking to the store
+
+## Dispatch
+- Execute the action by sending action to the reducer
