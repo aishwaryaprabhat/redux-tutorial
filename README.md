@@ -49,3 +49,20 @@ const counter = (state=0, action) => {
 ## Dispatch
 - Execute the action by sending action to the reducer
 - `store.dispatch(incrememnt());`
+
+## Combined Reducer
+- Used to bring all reducers together for the store in a complex application
+
+```
+import counterReducer from './counter'
+import loggedReducer from './isLogged'
+import {combineReducers} from 'redux'
+
+const allReducers = combineReducers({
+    counterReducer: counterReducer,
+    loggedReducer: loggedReducer
+});
+
+export default allReducers
+```
+
