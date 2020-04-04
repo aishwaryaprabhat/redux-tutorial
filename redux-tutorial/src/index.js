@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore, combineReducers} from 'redux';
+import {createStore} from 'redux';
+import allReducers from './reducers'; //webpack automatically looks for index.js
 
 const store = createStore()
 
